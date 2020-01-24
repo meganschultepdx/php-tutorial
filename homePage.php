@@ -51,9 +51,67 @@ define('PI', 3.1415);
             echo "abs(-5) = " . abs(-5) . "<br>";
         }
     }
-    echo $number;
    ?>
+   <?php
+   $num_oranges = 4;
+   $num_bananas = 36;
+   if (($num_oranges > 25) && ($num_bananas > 30)) {
+       echo "25% Discount<br>";
+   } elseif (($num_oranges > 30) || ($num_bananas > 35)) {
+       echo "15% Discount<br>";
+   } elseif (!(($num_oranges < 5)) || (!($num_bananas < 5))) {
+       echo "5% Discount<br>";
+   } else {
+       echo "No Discount<br>";
+   }
+   ?>
+   <?php
+    $request = "Coke";
+    switch ($request) {
+      case "Coke":
+        echo "here is your Coke<br>";
+        break;
+      case "Pepsi":
+        echo "Here is your Pepsi<br>";
+        break;
+      default:
+        echo "here is your Water<br>";
+        break;
+    }
+   ?>
+   <?php
+    $age = 12;
+    $can_vote = ($age >=18) ? "can vote" : "Can't vote";
+    echo "vote? : $can_vote<br>";
+   ?>
+   <?php
+   $rand_str = "     Random String    ";
+   printf("Length : %d<br>", strlen($rand_str));
+   printf("Lenght : %d<br>", strlen(ltrim($rand_str)));
+   printf("Lenght : %d<br>", strlen(rtrim($rand_str)));
+   // strtoupper
+   // strtolower
+   // ucfirst
+   ?>
+   <?php
+   $friends = array('joy', 'willow', 'ivy');
+   echo 'Wife: ' . $friends[0] . '<br>';
+   $friends[3] = 'steve';
+   foreach ($friends as $f) {
+       printf("Friend : %s<br>", $f);
+   }
+   $me_info = array('Name' => 'megan', 'street' => '123 fake st');
+    foreach ($me_info as $k => $v) {
+        printf("%s : %s<br>", $k, $v);
+    }
+  //sort($friends);
+  //rsort($friends);
+  //asort($me_info);
+  //krsort($me_info);
 
+  // multidimentional array --> array within an array
+   $customers = array(array('derek', '123 main'), array('sally', '122 main'));
+   ?>
 
 </body>
 </html>
